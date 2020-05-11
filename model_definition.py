@@ -77,8 +77,8 @@ class Unet3D(nn.Module):
         output = self.conv_final(output)
         if self.debug:
             print('Final output ', output.shape)
-        output_activation = self.final_activation(output)  # This is one of the changes I can make now..
-        return output_activation
+
+        return output
 
 
 class ConvBlock3D(nn.Module):
